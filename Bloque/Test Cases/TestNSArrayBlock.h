@@ -13,6 +13,4 @@
 
 }
 
--(void) should_map_with_block ;
-
 @end

@@ -12,6 +12,5 @@
 @interface NSValue (Ext)
 
 + valueWithValue:(const void *)aValue withObjCType:(const char *)aTypeDescription ;
-- initWithValue:(const void *)aValue withObjCType:(const char *)aTypeDescription ;
 
 @end

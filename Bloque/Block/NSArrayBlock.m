@@ -20,10 +20,8 @@
 
 - (id) map :(id (^)()) block {
 	NSMutableArray* ary = [NSMutableArray array];
-	int idx = 0;
 	for(id obj in self) {
-		id result = block(obj, idx++);
-		[ary addObject:result];
+		[ary addObject:block(obj)];
 	}
 	return ary;
 }

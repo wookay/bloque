@@ -1,5 +1,5 @@
 //
-//  NSStringBlock.h
+//  NSDictionaryExt.h
 //  Bloque
 //
 //  Created by Woo-Kyoung Noh on 05/03/10.
@@ -8,5 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Block)
+
+@interface NSDictionary (Ext)
+
++ (id)dictionaryWithKeysAndObjects:(id)firstKey, ... NS_REQUIRES_NIL_TERMINATION ;
+
 @end

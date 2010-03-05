@@ -8,7 +8,7 @@
 
 #import "BloqueAppDelegate.h"
 #import "RootViewController.h"
-#import "TestNSArrayBlock.h"
+#import "UnitTest.h"
 
 @implementation BloqueAppDelegate
 
@@ -22,7 +22,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     // Override point for customization after app launch    
 	
-	[[TestNSArrayBlock alloc] should_map_with_block];
+	[[UnitTest run:@"TestNSArrayBlock"] all_tests];
+	[[UnitTest run:@"TestNSDictionaryBlock"] all_tests];
+	//[[UnitTest run:@"TestNSArrayBlock"] performSelector:@selector(test_map_with_block)];
 	
 	[window addSubview:[navigationController view]];
     [window makeKeyAndVisible];
