@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* BloqueAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BloqueAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		DA8EFAF41140AF490013E218 /* NSExceptionExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EFAF31140AF490013E218 /* NSExceptionExt.m */; };
+		DA8EFB871140B49D0013E218 /* NSValueExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EFB861140B49D0013E218 /* NSValueExt.m */; };
+		DAEB1BB811409D6600BFC513 /* PLBlocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEB1BB711409D6600BFC513 /* PLBlocks.framework */; };
+		DAEB1C751140A27B00BFC513 /* NSArrayBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C6E1140A27B00BFC513 /* NSArrayBlock.m */; };
+		DAEB1C761140A27B00BFC513 /* NSDictionaryBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C701140A27B00BFC513 /* NSDictionaryBlock.m */; };
+		DAEB1C771140A27B00BFC513 /* NSNumberBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C721140A27B00BFC513 /* NSNumberBlock.m */; };
+		DAEB1C781140A27B00BFC513 /* NSStringBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C741140A27B00BFC513 /* NSStringBlock.m */; };
+		DAEB1C7E1140A29700BFC513 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C7D1140A29700BFC513 /* UnitTest.m */; };
+		DAEB1C941140A38100BFC513 /* TestNSArrayBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C931140A38100BFC513 /* TestNSArrayBlock.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* BloqueAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloqueAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* BloqueAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloqueAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Bloque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloque.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* Bloque_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bloque_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Bloque-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Bloque-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DA8EFAF21140AF490013E218 /* NSExceptionExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionExt.h; sourceTree = "<group>"; };
+		DA8EFAF31140AF490013E218 /* NSExceptionExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionExt.m; sourceTree = "<group>"; };
+		DA8EFB851140B49D0013E218 /* NSValueExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSValueExt.h; sourceTree = "<group>"; };
+		DA8EFB861140B49D0013E218 /* NSValueExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueExt.m; sourceTree = "<group>"; };
+		DAEB1BB711409D6600BFC513 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PLBlocks.framework; sourceTree = "<group>"; };
+		DAEB1C6D1140A27B00BFC513 /* NSArrayBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayBlock.h; sourceTree = "<group>"; };
+		DAEB1C6E1140A27B00BFC513 /* NSArrayBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayBlock.m; sourceTree = "<group>"; };
+		DAEB1C6F1140A27B00BFC513 /* NSDictionaryBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryBlock.h; sourceTree = "<group>"; };
+		DAEB1C701140A27B00BFC513 /* NSDictionaryBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryBlock.m; sourceTree = "<group>"; };
+		DAEB1C711140A27B00BFC513 /* NSNumberBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberBlock.h; sourceTree = "<group>"; };
+		DAEB1C721140A27B00BFC513 /* NSNumberBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberBlock.m; sourceTree = "<group>"; };
+		DAEB1C731140A27B00BFC513 /* NSStringBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringBlock.h; sourceTree = "<group>"; };
+		DAEB1C741140A27B00BFC513 /* NSStringBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringBlock.m; sourceTree = "<group>"; };
+		DAEB1C7C1140A29700BFC513 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
+		DAEB1C7D1140A29700BFC513 /* UnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
+		DAEB1C921140A38100BFC513 /* TestNSArrayBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNSArrayBlock.h; sourceTree = "<group>"; };
+		DAEB1C931140A38100BFC513 /* TestNSArrayBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSArrayBlock.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				DAEB1BB811409D6600BFC513 /* PLBlocks.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				1D3623240D0F684500981E51 /* BloqueAppDelegate.h */,
+				1D3623250D0F684500981E51 /* BloqueAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Bloque.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB1C911140A36400BFC513 /* TestCases */,
+				DAEB1C791140A28500BFC513 /* UnitTest */,
+				DAEB1C6C1140A27B00BFC513 /* Block */,
+				DA8EFAF51140AF4C0013E218 /* Ext */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* Bloque_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28F335F01007B36200424DE2 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Bloque-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB1BB711409D6600BFC513 /* PLBlocks.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA8EFAF51140AF4C0013E218 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				DA8EFAF21140AF490013E218 /* NSExceptionExt.h */,
+				DA8EFAF31140AF490013E218 /* NSExceptionExt.m */,
+				DA8EFB851140B49D0013E218 /* NSValueExt.h */,
+				DA8EFB861140B49D0013E218 /* NSValueExt.m */,
+			);
+			name = Ext;
+			sourceTree = "<group>";
+		};
+		DAEB1C6C1140A27B00BFC513 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB1C6D1140A27B00BFC513 /* NSArrayBlock.h */,
+				DAEB1C6E1140A27B00BFC513 /* NSArrayBlock.m */,
+				DAEB1C6F1140A27B00BFC513 /* NSDictionaryBlock.h */,
+				DAEB1C701140A27B00BFC513 /* NSDictionaryBlock.m */,
+				DAEB1C711140A27B00BFC513 /* NSNumberBlock.h */,
+				DAEB1C721140A27B00BFC513 /* NSNumberBlock.m */,
+				DAEB1C731140A27B00BFC513 /* NSStringBlock.h */,
+				DAEB1C741140A27B00BFC513 /* NSStringBlock.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		DAEB1C791140A28500BFC513 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB1C7C1140A29700BFC513 /* UnitTest.h */,
+				DAEB1C7D1140A29700BFC513 /* UnitTest.m */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		DAEB1C911140A36400BFC513 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB1C921140A38100BFC513 /* TestNSArrayBlock.h */,
+				DAEB1C931140A38100BFC513 /* TestNSArrayBlock.m */,
+			);
+			name = TestCases;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Bloque */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Bloque" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bloque;
+			productName = Bloque;
+			productReference = 1D6058910D05DD3D006BFB54 /* Bloque.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Bloque" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Bloque */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* BloqueAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				DAEB1C751140A27B00BFC513 /* NSArrayBlock.m in Sources */,
+				DAEB1C761140A27B00BFC513 /* NSDictionaryBlock.m in Sources */,
+				DAEB1C771140A27B00BFC513 /* NSNumberBlock.m in Sources */,
+				DAEB1C781140A27B00BFC513 /* NSStringBlock.m in Sources */,
+				DAEB1C7E1140A29700BFC513 /* UnitTest.m in Sources */,
+				DAEB1C941140A38100BFC513 /* TestNSArrayBlock.m in Sources */,
+				DA8EFAF41140AF490013E218 /* NSExceptionExt.m in Sources */,
+				DA8EFB871140B49D0013E218 /* NSValueExt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Bloque_Prefix.pch;
+				INFOPLIST_FILE = "Bloque-Info.plist";
+				PRODUCT_NAME = Bloque;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Bloque_Prefix.pch;
+				INFOPLIST_FILE = "Bloque-Info.plist";
+				PRODUCT_NAME = Bloque;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = coop.plausible.blocks.compilers.gcc.4_2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.1.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Bloque" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Bloque" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
