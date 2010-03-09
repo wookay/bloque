@@ -11,11 +11,17 @@
 @interface Word : NSObject {
 	NSString* symbol;
 	NSMutableArray* signatures;
+	BOOL resultAppend;
+	BOOL resultCall;
 }
 @property (retain, nonatomic) NSString* symbol;
 @property (retain, nonatomic) NSMutableArray* signatures;
+@property (nonatomic) BOOL resultAppend;
+@property (nonatomic) BOOL resultCall;
 
 + (id) wordWithSymbol:(NSString*)symbol_ ;
++ (id) wordWithSymbol:(NSString*)symbol_ resultAppend:(BOOL)resultAppend_ ;
++ (id) wordWithSymbol:(NSString*)symbol_ resultAppend:(BOOL)resultAppend_ resultCall:(BOOL)resultCall_ ;
 - (id) bind:(Class)klass with:(SEL)sel ;
 
 @end

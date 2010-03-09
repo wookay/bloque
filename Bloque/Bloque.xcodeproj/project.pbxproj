@@ -19,6 +19,7 @@
 		DA21AD441145D62C0081BD54 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AD431145D62C0081BD54 /* Logger.m */; };
 		DA21AEC61145EA910081BD54 /* PrettyPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AEC51145EA910081BD54 /* PrettyPrint.m */; };
 		DA21AF5A1146027F0081BD54 /* Inspect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AF591146027F0081BD54 /* Inspect.m */; };
+		DA21B3E11146360C0081BD54 /* NSMutableArrayExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21B3E01146360C0081BD54 /* NSMutableArrayExt.m */; };
 		DA2F5613114355160032FBC3 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2F5612114355160032FBC3 /* Math.m */; };
 		DA4D1B641140D8D400CE3C8D /* NSObjectExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1B631140D8D400CE3C8D /* NSObjectExt.m */; };
 		DA4D1B691140D97300CE3C8D /* NSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1B681140D97300CE3C8D /* NSStringExt.m */; };
@@ -64,6 +65,8 @@
 		DA21AF581146027F0081BD54 /* Inspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inspect.h; sourceTree = "<group>"; };
 		DA21AF591146027F0081BD54 /* Inspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inspect.m; sourceTree = "<group>"; };
 		DA21B01A114605C30081BD54 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		DA21B3DF1146360C0081BD54 /* NSMutableArrayExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayExt.h; sourceTree = "<group>"; };
+		DA21B3E01146360C0081BD54 /* NSMutableArrayExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayExt.m; sourceTree = "<group>"; };
 		DA2F55D9114353A30032FBC3 /* ExtHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtHeaders.h; sourceTree = "<group>"; };
 		DA2F5611114355160032FBC3 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		DA2F5612114355160032FBC3 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				DA4D1B681140D97300CE3C8D /* NSStringExt.m */,
 				DA4D1C471140E49C00CE3C8D /* NSDictionaryExt.h */,
 				DA4D1C481140E49C00CE3C8D /* NSDictionaryExt.m */,
+				DA21B3DF1146360C0081BD54 /* NSMutableArrayExt.h */,
+				DA21B3E01146360C0081BD54 /* NSMutableArrayExt.m */,
 				DA21AD611145D6D50081BD54 /* UnitTest */,
 			);
 			path = Ext;
@@ -389,6 +394,7 @@
 				DA21AD441145D62C0081BD54 /* Logger.m in Sources */,
 				DA21AEC61145EA910081BD54 /* PrettyPrint.m in Sources */,
 				DA21AF5A1146027F0081BD54 /* Inspect.m in Sources */,
+				DA21B3E11146360C0081BD54 /* NSMutableArrayExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

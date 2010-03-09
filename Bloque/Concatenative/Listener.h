@@ -15,6 +15,7 @@
 
 +(id) listener ;
 -(void) input:(id)obj ;
+-(void) inputsWithArray:(NSArray*)inputs ;
 -(void) call_effect ;
 
 @end

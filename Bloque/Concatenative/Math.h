@@ -10,3 +10,5 @@
 
 
 id (^ plus )();
+id (^ divide )();
+

@@ -13,3 +13,7 @@
 id (^ plus )() = ^() {
 	return [[Word wordWithSymbol:@"+"] bind:[NSNumber class] with:@selector(plus:)];
 };
+
+id (^ divide )() = ^() {
+	return [[Word wordWithSymbol:@"/"] bind:[NSNumber class] with:@selector(divide:)];
+};

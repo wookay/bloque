@@ -12,10 +12,24 @@
 @implementation Word
 @synthesize symbol;
 @synthesize signatures;
+@synthesize resultAppend;
+@synthesize resultCall;
 
 + (id) wordWithSymbol:(NSString*)symbol_ {
 	Word* word = [[[Word alloc] init] autorelease];
 	word.symbol = symbol_;
+	return word;
+}
+
++ (id) wordWithSymbol:(NSString*)symbol_ resultAppend:(BOOL)resultAppend_ {
+	Word* word = [self wordWithSymbol:symbol_];
+	word.resultAppend = resultAppend_;
+	return word;
+}
+
++ (id) wordWithSymbol:(NSString*)symbol_ resultAppend:(BOOL)resultAppend_ resultCall:(BOOL)resultCall_ {
+	Word* word = [self wordWithSymbol:symbol_ resultAppend:resultAppend_];
+	word.resultCall = resultCall_;
 	return word;
 }
 
@@ -30,6 +44,7 @@
 	self = [super init];
 	if (self) {
 		self.signatures = [NSMutableArray array];
+		self.resultAppend = false;
 	}
 	return self;
 }

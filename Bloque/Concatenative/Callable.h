@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@interface PLBlock : NSObject
+@end
+
 
 @interface Callable : NSObject {
 	NSMutableArray* array;
@@ -15,5 +18,6 @@
 @property (retain,nonatomic) NSMutableArray* array;
 
 -(NSArray*) call_quotation ;
+-(NSArray*) call_quotation_with_array:(NSArray*)body ;
 
 @end

@@ -7,6 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Quotation.h"
 
 id (^ call )();
+id (^ nip )();
+id (^ drop )();
+id (^ swap )();
+id (^ dip )();
+
+
+@interface NSObject (Kernel)
+-(id) nip:(id)y ;
+-(void) drop ;
+-(id) swap:(id)y ;
+-(id) dip:(Quotation*)quot ;
+@end

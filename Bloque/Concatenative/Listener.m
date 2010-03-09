@@ -17,14 +17,18 @@
 	return [[[Listener alloc] init] autorelease];
 }
 
+-(void) inputsWithArray:(NSArray*)inputs {
+	[self.datastack addObjectsFromArray:inputs];
+	[self call_effect];
+}
+
 -(void) input:(id)obj {
 	[self.datastack addObject:obj];
 	[self call_effect];
 }
 
 -(void) call_effect {
-	Quotation* quot = [Quotation qutationWithArray:self.datastack];
-	quot.array = [NSMutableArray arrayWithArray:[quot call_quotation]];
+	Quotation* quot = [Quotation quotationWithArray:self.datastack];
 	self.datastack = [NSMutableArray arrayWithArray:[quot call_quotation]];
 }
 

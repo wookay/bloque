@@ -12,8 +12,9 @@
 @interface Quotation : Callable {
 }
 
-+ (id) qutationWithArray:(NSArray*)ary ;
-+ (id) qutationWithObjects:(id)first, ... NS_REQUIRES_NIL_TERMINATION ;
++ (id) quotationWithArray:(NSArray*)ary ;
++ (id) quotationWithObject:(id)obj ;
++ (id) quotationWithObjects:(id)first, ... NS_REQUIRES_NIL_TERMINATION ;
 
 @end
 

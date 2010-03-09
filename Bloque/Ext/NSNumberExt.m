@@ -15,4 +15,8 @@
 	return [NSNumber numberWithInt:[self intValue] + [num intValue]];
 }
 
+-(NSNumber*) divide:(NSNumber*) num {
+	return [NSNumber numberWithFloat:[self floatValue] / [num floatValue]];
+}
+
 @end

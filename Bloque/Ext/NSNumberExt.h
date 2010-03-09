@@ -14,5 +14,6 @@
 @interface NSNumber (Ext)
 
 -(NSNumber*) plus:(NSNumber*) num ;
+-(NSNumber*) divide:(NSNumber*) num ;
 
 @end

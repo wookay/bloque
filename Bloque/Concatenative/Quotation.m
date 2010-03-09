@@ -14,13 +14,17 @@
 
 @implementation Quotation
 
-+ (id) qutationWithArray:(NSArray*)ary {
++ (id) quotationWithArray:(NSArray*)ary {
 	Quotation* quot = [[[Quotation alloc] init] autorelease];
 	quot.array = [NSMutableArray arrayWithArray:ary];
 	return quot;		
 }
 
-+ (id) qutationWithObjects:(id)first, ... {
++ (id) quotationWithObject:(id)obj {
+	return [Quotation quotationWithArray:[NSArray arrayWithObject:obj]];
+}
+
++ (id) quotationWithObjects:(id)first, ... {
 	NSMutableArray* ary = [NSMutableArray array];
 	id obj = first;
 	va_list args;
@@ -31,7 +35,7 @@
 	}
 	va_end(args);
 	
-	return [Quotation qutationWithArray:ary];
+	return [Quotation quotationWithArray:ary];
 }
 
 @end
