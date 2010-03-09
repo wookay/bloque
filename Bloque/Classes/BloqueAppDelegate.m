@@ -23,8 +23,9 @@
     // Override point for customization after app launch    
 	
 	[[UnitTest run:@"TestNSArrayBlock"] all_tests];
+	// [[UnitTest run:@"TestNSArrayBlock"] performSelector:@selector(test_map_with_block)];
 	[[UnitTest run:@"TestNSDictionaryBlock"] all_tests];
-	//[[UnitTest run:@"TestNSArrayBlock"] performSelector:@selector(test_map_with_block)];
+	[[UnitTest run:@"TestBasis"] all_tests];	
 	
 	[window addSubview:[navigationController view]];
     [window makeKeyAndVisible];

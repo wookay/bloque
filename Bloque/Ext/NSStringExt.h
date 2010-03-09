@@ -14,6 +14,8 @@
 #define AMP          @"&"
 #define EQUAL        @"="
 #define COLON        @":"
+#define COMMA        @","
+
 
 NSString* SWF(NSString* format, ...) ;
 

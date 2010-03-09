@@ -6,22 +6,24 @@
 //  Copyright 2010 factorcat. All rights reserved.
 //
 
+#import "objc/runtime.h"
 #import "NSObjectExt.h"
-#import "NSStringExt.h"
 
 @implementation NSObject (Ext)
 
--(id) inspect {
-	if ([self isKindOfClass:[NSArray class]]) {
-		NSMutableArray* ary = [NSMutableArray array];
-		for (id obj in (NSArray*)self) {
-			[ary addObject:SWF(@"%@", [obj inspect])];
-		}
-		return SWF(@"[%@]", [ary componentsJoinedByString:@", "]);
-	} else if ([self isKindOfClass:[NSString class]]) {
-		return SWF(@"\"%@\"", self);
+-(NSArray*) methods {
+	Class targetClass = [self class];
+	NSMutableArray* ary = [NSMutableArray array];
+	unsigned int methodCount;
+	Method *methods = class_copyMethodList((Class)targetClass, &methodCount);
+	size_t idx;
+	for (idx = 0; idx < methodCount; ++idx) {
+		Method method = methods[idx];
+		SEL selector = method_getName(method);
+		NSString *selectorName = NSStringFromSelector(selector);
+		[ary addObject:selectorName];
 	}
-	return SWF(@"%@", self);
+	return ary;
 }
 
 @end

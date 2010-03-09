@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "NSValueExt.h"
 
-void log_info(NSString *format, ...) ;
-
 #define __FILENAME__ (strrchr(__FILE__,'/')+1)
 #define assert_equal(expected, got) \
  do { \
@@ -28,7 +26,6 @@ void log_info(NSString *format, ...) ;
 @interface UnitTest : NSObject
 
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
-+(NSArray*) methods_start_with_test:(Class)targetClass ;
 +(id) run:(NSString*)targetClassString ;
 
 @end

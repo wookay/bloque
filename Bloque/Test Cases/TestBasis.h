@@ -1,5 +1,5 @@
 //
-//  NSObjectExt.h
+//  TestSequences.h
 //  Bloque
 //
 //  Created by Woo-Kyoung Noh on 05/03/10.
@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSObject (Ext)
+@interface TestBasis : NSObject {
 
--(NSArray*) methods ;
+}
 
 @end
