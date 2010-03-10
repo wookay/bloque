@@ -10,6 +10,8 @@
 #import "Word.h"
 #import "NSMutableArrayExt.h"
 #import "Logger.h"
+#import "Syntax.h"
+#import "objc/runtime.h"
 
 @interface PLBlock (Ext)
 -(NSString*) unparse ;
@@ -51,7 +53,7 @@
 			Word* word = block();
 			BOOL block_called = false;
 			for (NSArray* signature in word.signatures) {
-				NSString* selStr = [signature objectAtIndex:1];
+				NSString* selStr = [signature objectAtIndex:1];				
 				NSMethodSignature* sig = [signature objectAtIndex:2];
 				int argSize = [sig numberOfArguments] - 1;
 				if (argSize > 0) {
@@ -75,7 +77,17 @@
 								[invocation setSelector:sel];
 								[invocation invokeWithTarget:sender];
 								id result;
-								[invocation getReturnValue:&result];
+								switch (*[sig methodReturnType]) {
+									case _C_CHR: {
+											char resultChar;
+											[invocation getReturnValue:&resultChar];
+											result = resultChar ? t : f;
+										}
+										break;
+									default:
+										[invocation getReturnValue:&result];
+										break;
+								}
 								if (word.resultAppend) {
 									[stack addObjectsFromArray:result];
 								} else {

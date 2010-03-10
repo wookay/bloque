@@ -22,10 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     // Override point for customization after app launch    
 
-	// [[UnitTest run:@"TestNSArrayBlock"] performSelector:@selector(test_map_with_block)];
 	[[UnitTest run:@"TestNSArrayBlock"] all_tests];
 	[[UnitTest run:@"TestNSDictionaryBlock"] all_tests];
 	[[UnitTest run:@"TestBasis"] all_tests];	
+	[[UnitTest run:@"TestKernel"] all_tests];	
+//	[[UnitTest run:@"TestKernel"] performSelector:@selector(test_ordinary_words)];
 	
 	[window addSubview:[navigationController view]];
     [window makeKeyAndVisible];

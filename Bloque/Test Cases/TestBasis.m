@@ -9,13 +9,14 @@
 #import "TestBasis.h"
 #import "Quotation.h"
 #import "UnitTest.h"
-#import "Sequences.h"
 #import "Listener.h"
-#import "Math.h"
-#import "Kernel.h"
 #import "ExtHeaders.h"
 #import "PrettyPrint.h"
 
+// USING:
+#import "Math.h"
+#import "Sequences.h"
+#import "Kernel.h"
 
 @implementation TestBasis
 
@@ -34,7 +35,7 @@
 		
 	Quotation* quot = [Quotation quotationWithObjects:NUM(1), NUM(2), plus, nil];
 	assert_equal(@"[ 1 2 + ]", [quot unparse]);
-	
+
 }
 
 -(void) test_sequences {
@@ -56,32 +57,4 @@
 	assert_equal(@"\"a\" \"bc\"", [listener unparse]);
 	
 }
-
--(void) test_kernel {
-	
-	Listener* listener = [Listener listener];
-	assert_equal(@"", [listener unparse]);
-	
-	[listener inputsWithArray:[NSArray arrayWithObjects:NUM(1), NUM(2), nip, nil]];
-	assert_equal(@"2", [listener unparse]);
-	
-	[listener input:drop];
-	assert_equal(@"", [listener unparse]);
-	
-	[listener inputsWithArray:[NSArray arrayWithObjects:NUM(1), NUM(2), swap, nil]];
-	assert_equal(@"2 1", [listener unparse]);
-
-	[listener input:drop];
-	[listener input:drop];
-
-	[listener inputsWithArray:[NSArray arrayWithObjects:NUM(10), NUM(20), divide, nil]];
-	assert_equal(@"0.5", [listener unparse]);
-
-	[listener input:drop];
-
-	[listener inputsWithArray:[NSArray arrayWithObjects:NUM(10), NUM(20), NUM(30), [Quotation quotationWithObject:divide], dip, nil]];
-	assert_equal(@"0.5 30", [listener unparse]);
-	
-}
-
 @end
