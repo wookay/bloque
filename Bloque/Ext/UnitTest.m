@@ -12,6 +12,10 @@
 #import "Inspect.h"
 #import "Logger.h"
 
+static int passed = 0;
+static int failed = 0;
+
+
 @implementation NSObject (UnitTest)
 
 -(void) all_tests {
@@ -32,10 +36,27 @@
 
 @implementation UnitTest
 
++(void) report {
+	if (passed > 1) {
+		printf("OK, passed %d tests.\n", passed);
+	} else {
+		printf("OK, passed %d test.\n", passed);			
+	}	
+	if (failed > 0) {
+		if (failed == 1) {
+			printf("Oops, failed %d test.\n", failed);			
+		} else {
+			printf("Oops, failed %d tests.\n", failed);
+		}
+	}
+}
+
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line {	
 	if ([expected isEqual:got]) {
+		passed += 1;
 		print_log_info([file UTF8String], line, @"passed: %@", [expected inspect]);
 	} else {
+		failed += 1;
 		print_log_info([file UTF8String], line, @"Assertion failed\nExpected: %@\nGot: %@", [expected inspect], [got inspect]);
 	}
 }

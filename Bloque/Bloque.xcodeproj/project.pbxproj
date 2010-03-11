@@ -29,6 +29,10 @@
 		DA4D1C491140E49C00CE3C8D /* NSDictionaryExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1C481140E49C00CE3C8D /* NSDictionaryExt.m */; };
 		DA4D1D211141343A00CE3C8D /* TestBasis.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1D201141343A00CE3C8D /* TestBasis.m */; };
 		DA4D1D261141362C00CE3C8D /* Quotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1D251141362C00CE3C8D /* Quotation.m */; };
+		DA57282111492BEC00870503 /* EBNF.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57282011492BEC00870503 /* EBNF.m */; };
+		DA57282411492BFA00870503 /* TestEBNF.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57282311492BFA00870503 /* TestEBNF.m */; };
+		DA57291D11493F6A00870503 /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57291C11493F6A00870503 /* Rule.m */; };
+		DA57292011493F7800870503 /* NSStringEBNF.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57291F11493F7800870503 /* NSStringEBNF.m */; };
 		DA8014FE1141F80A00F57015 /* Sequences.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8014FD1141F80A00F57015 /* Sequences.m */; };
 		DA8EFC2B1140B7F90013E218 /* TestNSArrayBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EFC2A1140B7F90013E218 /* TestNSArrayBlock.m */; };
 		DA8EFC321140B8590013E218 /* NSValueExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EFC2F1140B8590013E218 /* NSValueExt.m */; };
@@ -88,6 +92,14 @@
 		DA4D1D201141343A00CE3C8D /* TestBasis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBasis.m; sourceTree = "<group>"; };
 		DA4D1D241141362C00CE3C8D /* Quotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quotation.h; sourceTree = "<group>"; };
 		DA4D1D251141362C00CE3C8D /* Quotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quotation.m; sourceTree = "<group>"; };
+		DA57281F11492BEC00870503 /* EBNF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBNF.h; sourceTree = "<group>"; };
+		DA57282011492BEC00870503 /* EBNF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBNF.m; sourceTree = "<group>"; };
+		DA57282211492BFA00870503 /* TestEBNF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEBNF.h; sourceTree = "<group>"; };
+		DA57282311492BFA00870503 /* TestEBNF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEBNF.m; sourceTree = "<group>"; };
+		DA57291B11493F6A00870503 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
+		DA57291C11493F6A00870503 /* Rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rule.m; sourceTree = "<group>"; };
+		DA57291E11493F7800870503 /* NSStringEBNF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringEBNF.h; sourceTree = "<group>"; };
+		DA57291F11493F7800870503 /* NSStringEBNF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringEBNF.m; sourceTree = "<group>"; };
 		DA8014FC1141F80A00F57015 /* Sequences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequences.h; sourceTree = "<group>"; };
 		DA8014FD1141F80A00F57015 /* Sequences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequences.m; sourceTree = "<group>"; };
 		DA8EFC291140B7F90013E218 /* TestNSArrayBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNSArrayBlock.h; sourceTree = "<group>"; };
@@ -259,6 +271,8 @@
 				DA4D1D201141343A00CE3C8D /* TestBasis.m */,
 				DA21B74411468CCF0081BD54 /* TestKernel.h */,
 				DA21B74511468CCF0081BD54 /* TestKernel.m */,
+				DA57282211492BFA00870503 /* TestEBNF.h */,
+				DA57282311492BFA00870503 /* TestEBNF.m */,
 			);
 			name = Concatenative;
 			sourceTree = "<group>";
@@ -268,8 +282,22 @@
 			children = (
 				DA21ACB31145D3690081BD54 /* Core */,
 				DA21ACA61145D22A0081BD54 /* Basis */,
+				DA57291A11493F6000870503 /* EBNF */,
 			);
 			path = Concatenative;
+			sourceTree = "<group>";
+		};
+		DA57291A11493F6000870503 /* EBNF */ = {
+			isa = PBXGroup;
+			children = (
+				DA57281F11492BEC00870503 /* EBNF.h */,
+				DA57282011492BEC00870503 /* EBNF.m */,
+				DA57291B11493F6A00870503 /* Rule.h */,
+				DA57291C11493F6A00870503 /* Rule.m */,
+				DA57291E11493F7800870503 /* NSStringEBNF.h */,
+				DA57291F11493F7800870503 /* NSStringEBNF.m */,
+			);
+			name = EBNF;
 			sourceTree = "<group>";
 		};
 		DA8EFC281140B7F90013E218 /* Test Cases */ = {
@@ -407,6 +435,10 @@
 				DA21B3E11146360C0081BD54 /* NSMutableArrayExt.m in Sources */,
 				DA21B71111468BC10081BD54 /* Syntax.m in Sources */,
 				DA21B74611468CCF0081BD54 /* TestKernel.m in Sources */,
+				DA57282111492BEC00870503 /* EBNF.m in Sources */,
+				DA57282411492BFA00870503 /* TestEBNF.m in Sources */,
+				DA57291D11493F6A00870503 /* Rule.m in Sources */,
+				DA57292011493F7800870503 /* NSStringEBNF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

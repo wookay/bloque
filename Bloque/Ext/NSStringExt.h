@@ -15,7 +15,9 @@
 #define EQUAL        @"="
 #define COLON        @":"
 #define COMMA        @","
-
+#define DOT          @"."
+#define STAR         @"*"
+#define PLUS         @"+"
 
 NSString* SWF(NSString* format, ...) ;
 
