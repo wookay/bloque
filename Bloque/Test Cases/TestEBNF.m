@@ -14,6 +14,7 @@
 #import "NSStringExt.h"
 #import "NSObjectEBNF.h"
 #import "Syntax.h"
+#import "Math.h"
 
 @implementation TestEBNF
 
@@ -103,6 +104,11 @@
 	} @catch (NSException* exception) {
 		assert_equal(@"Sequence index out of bounds", exception.reason);	
 	}
+
+	Quotation* quot = [Quotation quotationWithObject:string_to_number];
+	ebnf = [EBNF ruleWithObject:[[square_bracket(@"0-9") plus] action:quot]];
+	id got___123 = [ebnf parse_multiline_string:@"123"];
+	assert_equal(NUM(123), got___123);
 	
 }
 

@@ -16,6 +16,7 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		DA1D0CE11149D95F0040AFC3 /* NSObjectEBNF.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0CE01149D95F0040AFC3 /* NSObjectEBNF.m */; };
+		DA1D11AD114A58AE0040AFC3 /* NSArrayExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D11AC114A58AE0040AFC3 /* NSArrayExt.m */; };
 		DA21AA261144EF380081BD54 /* NSNumberExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AA251144EF380081BD54 /* NSNumberExt.m */; };
 		DA21AD441145D62C0081BD54 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AD431145D62C0081BD54 /* Logger.m */; };
 		DA21AEC61145EA910081BD54 /* PrettyPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AEC51145EA910081BD54 /* PrettyPrint.m */; };
@@ -66,6 +67,8 @@
 		DA1D0CDF1149D95F0040AFC3 /* NSObjectEBNF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectEBNF.h; sourceTree = "<group>"; };
 		DA1D0CE01149D95F0040AFC3 /* NSObjectEBNF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectEBNF.m; sourceTree = "<group>"; };
 		DA1D0DE01149EFB60040AFC3 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		DA1D11AB114A58AE0040AFC3 /* NSArrayExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExt.h; sourceTree = "<group>"; };
+		DA1D11AC114A58AE0040AFC3 /* NSArrayExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExt.m; sourceTree = "<group>"; };
 		DA21AA241144EF380081BD54 /* NSNumberExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExt.h; sourceTree = "<group>"; };
 		DA21AA251144EF380081BD54 /* NSNumberExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberExt.m; sourceTree = "<group>"; };
 		DA21AD421145D62C0081BD54 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 				DA21AA251144EF380081BD54 /* NSNumberExt.m */,
 				DA4D1B671140D97300CE3C8D /* NSStringExt.h */,
 				DA4D1B681140D97300CE3C8D /* NSStringExt.m */,
+				DA1D11AB114A58AE0040AFC3 /* NSArrayExt.h */,
+				DA1D11AC114A58AE0040AFC3 /* NSArrayExt.m */,
 				DA4D1C471140E49C00CE3C8D /* NSDictionaryExt.h */,
 				DA4D1C481140E49C00CE3C8D /* NSDictionaryExt.m */,
 				DA21B3DF1146360C0081BD54 /* NSMutableArrayExt.h */,
@@ -447,6 +452,7 @@
 				DA57291D11493F6A00870503 /* Rule.m in Sources */,
 				DA57292011493F7800870503 /* NSStringEBNF.m in Sources */,
 				DA1D0CE11149D95F0040AFC3 /* NSObjectEBNF.m in Sources */,
+				DA1D11AD114A58AE0040AFC3 /* NSArrayExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,3 +17,9 @@ id (^ plus )() = ^() {
 id (^ divide )() = ^() {
 	return [[Word wordWithSymbol:@"/"] bind:[NSNumber class] with:@selector(divide:)];
 };
+
+#pragma mark math.parser
+
+id (^ string_to_number )() = ^() {
+	return [[Word wordWithSymbol:@"string>number"] bind:[NSArray class] with:@selector(string_to_number)];
+};

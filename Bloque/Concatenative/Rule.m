@@ -32,10 +32,12 @@ id (^ square_bracket )(NSString* instance) = ^(NSString* instance) {
 @implementation Rule
 @synthesize symbol;
 @synthesize instance;
+@synthesize action;
 
 + (id) ruleWithSymbol:(NSString*)symbol_ {
 	Rule* rule = [[[Rule alloc] init] autorelease];
 	rule.symbol = symbol_;
+	rule.action = nil;
 	return rule;
 }
 
@@ -48,6 +50,7 @@ id (^ square_bracket )(NSString* instance) = ^(NSString* instance) {
 - (void)dealloc {
 	[self.symbol release];
 	[self.instance release];
+	[self.action release];
 	[super dealloc];
 }
 
@@ -135,6 +138,11 @@ id (^ square_bracket )(NSString* instance) = ^(NSString* instance) {
 		rule = element;
 	}
 	return rule;
+}
+
+-(id) action:(Quotation*)quot {
+	self.action = quot;
+	return self;
 }
 
 @end

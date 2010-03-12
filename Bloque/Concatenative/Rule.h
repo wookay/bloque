@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Quotation.h"
 
 id (^ full_stop )();
 id (^ ampersand )(NSString* instance);
@@ -16,9 +17,11 @@ id (^ square_bracket )(NSString* instance);
 @interface Rule : NSObject {
 	NSString* symbol;
 	id instance;
+	Quotation* action;
 }
 @property (retain, nonatomic) NSString* symbol;
 @property (retain, nonatomic) id instance;
+@property (retain, nonatomic) Quotation* action;
 
 + (id) ruleWithSymbol:(NSString*)symbol_ ;
 + (id) ruleWithSymbol:(NSString*)symbol_ instance:(id)instance_ ;
@@ -26,6 +29,7 @@ id (^ square_bracket )(NSString* instance);
 -(NSString*) sub_symbol ;
 +(Rule*) fromElement:(id)element ;
 -(NSCharacterSet*) range_of_chars_to_charset:(NSString*)str ;
+-(id) action:(Quotation*)quot ;
 
 @end
 

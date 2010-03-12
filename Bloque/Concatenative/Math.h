@@ -12,3 +12,7 @@
 id (^ plus )();
 id (^ divide )();
 
+id (^ string_to_number )();
+
+
+

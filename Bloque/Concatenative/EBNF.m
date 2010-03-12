@@ -38,7 +38,7 @@
 	if (1 == tokenizerCount) {
 		return [tokens lastObject];
 	} else {
-		return tokens;		
+		return tokens;
 	}
 }
 
@@ -127,7 +127,11 @@
 	} else if ([PIPE isEqualToString:rule.symbol]) {
 		[scanner scanCharactersFromSet:[rule to_charset] intoString:&value];
 	}
-	return value;
+	if (nil == rule.action) {
+		return value;
+	} else {
+		return [[[[Quotation quotationWithObject:value] compose:rule.action] call_quotation] lastObject];
+	}
 }
 
 +(id) ruleWithObject:(id)obj {

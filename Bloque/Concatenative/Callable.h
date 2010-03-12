@@ -17,5 +17,6 @@
 
 -(NSArray*) call_quotation ;
 -(NSArray*) call_quotation_with_array:(NSArray*)body ;
+-(Callable*) compose:(Callable*)callable_ ;
 
 @end

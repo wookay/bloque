@@ -7,7 +7,7 @@
 //
 
 #import "NSStringExt.h"
-
+#import "NSNumberExt.h"
 
 NSString* SWF(NSString* format, ...) {
 	va_list args;

@@ -118,4 +118,10 @@
 	return [self call_quotation_with_array:self.array];
 }
 
+
+-(Callable*) compose:(Callable*)callable_ {
+	[self.array arrayByAddingObjectsFromArray:callable_.array];
+	return self;
+}
+
 @end
