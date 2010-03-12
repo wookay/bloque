@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PLBlock : NSObject
-@end
 
 
 @interface Callable : NSObject {

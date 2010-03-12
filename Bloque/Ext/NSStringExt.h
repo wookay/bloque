@@ -8,22 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
-#define EMPTY_STRING @""
-#define SPACE        @" "
-#define LF           @"\n"
-#define AMP          @"&"
-#define EQUAL        @"="
-#define COLON        @":"
-#define COMMA        @","
-#define DOT          @"."
-#define STAR         @"*"
-#define PLUS         @"+"
+#define EMPTY_STRING     @""
+#define SPACE            @" "
+#define LF               @"\n"
+#define AMP              @"&"
+#define EQUAL            @"="
+#define COLON            @":"
+#define COMMA            @","
+#define DOT              @"."
+#define STAR             @"*"
+#define PLUS             @"+"
+#define PIPE             @"|"
+#define QUESTION_MARK    @"?"
+#define EXCLAMATION_MARK @"!"
+#define	LESS_THAN        @"<"
+#define	GREATER_THAN     @">"
+#define SQUARE_BRACKET   @"[]"
+#define OPENING_SQUARE_BRACKET   @"["
+#define CLOSING_SQUARE_BRACKET   @"]"
+
+#define CHAR_MINUS       '-'
 
 NSString* SWF(NSString* format, ...) ;
 
 
 @interface NSString (Ext)
 
+-(unichar) to_unichar ;
++(NSString*) stringWithCharacter:(unichar) ch ;
 -(NSString*) stringAtIndex:(int)idx ;
 -(NSString*) last ;
 

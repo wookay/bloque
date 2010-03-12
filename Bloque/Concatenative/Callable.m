@@ -12,6 +12,7 @@
 #import "Logger.h"
 #import "Syntax.h"
 #import "objc/runtime.h"
+#import "Block.h"
 
 @interface PLBlock (Ext)
 -(NSString*) unparse ;

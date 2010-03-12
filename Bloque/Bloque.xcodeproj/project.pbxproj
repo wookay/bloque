@@ -15,6 +15,7 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		DA1D0CE11149D95F0040AFC3 /* NSObjectEBNF.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0CE01149D95F0040AFC3 /* NSObjectEBNF.m */; };
 		DA21AA261144EF380081BD54 /* NSNumberExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AA251144EF380081BD54 /* NSNumberExt.m */; };
 		DA21AD441145D62C0081BD54 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AD431145D62C0081BD54 /* Logger.m */; };
 		DA21AEC61145EA910081BD54 /* PrettyPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AEC51145EA910081BD54 /* PrettyPrint.m */; };
@@ -62,6 +63,9 @@
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Bloque-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Bloque-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DA1D0CDF1149D95F0040AFC3 /* NSObjectEBNF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectEBNF.h; sourceTree = "<group>"; };
+		DA1D0CE01149D95F0040AFC3 /* NSObjectEBNF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectEBNF.m; sourceTree = "<group>"; };
+		DA1D0DE01149EFB60040AFC3 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		DA21AA241144EF380081BD54 /* NSNumberExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExt.h; sourceTree = "<group>"; };
 		DA21AA251144EF380081BD54 /* NSNumberExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberExt.m; sourceTree = "<group>"; };
 		DA21AD421145D62C0081BD54 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				DA57291C11493F6A00870503 /* Rule.m */,
 				DA57291E11493F7800870503 /* NSStringEBNF.h */,
 				DA57291F11493F7800870503 /* NSStringEBNF.m */,
+				DA1D0CDF1149D95F0040AFC3 /* NSObjectEBNF.h */,
+				DA1D0CE01149D95F0040AFC3 /* NSObjectEBNF.m */,
 			);
 			name = EBNF;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				DAEB1C721140A27B00BFC513 /* NSNumberBlock.m */,
 				DAEB1C731140A27B00BFC513 /* NSStringBlock.h */,
 				DAEB1C741140A27B00BFC513 /* NSStringBlock.m */,
+				DA1D0DE01149EFB60040AFC3 /* Block.h */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -439,6 +446,7 @@
 				DA57282411492BFA00870503 /* TestEBNF.m in Sources */,
 				DA57291D11493F6A00870503 /* Rule.m in Sources */,
 				DA57292011493F7800870503 /* NSStringEBNF.m in Sources */,
+				DA1D0CE11149D95F0040AFC3 /* NSObjectEBNF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

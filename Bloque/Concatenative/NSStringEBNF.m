@@ -10,10 +10,15 @@
 #import "Rule.h"
 
 @implementation NSString (EBNF)
--(Rule*) star {
-	return [Rule ruleWithSymbol:STAR instance:self];
+-(Rule*) question_mark {
+	return [Rule ruleWithSymbol:QUESTION_MARK instance:self];
 }
--(Rule*) plus {
-	return [Rule ruleWithSymbol:PLUS instance:self];
+-(Rule*) exclamation_mark {
+	return [Rule ruleWithSymbol:EXCLAMATION_MARK instance:self];	
 }
+-(Rule*) pipe:(NSString*)instance {
+	NSMutableArray* ary = [NSMutableArray arrayWithObjects:self, instance, nil];
+	return [Rule ruleWithSymbol:PIPE instance:ary];
+}
+
 @end

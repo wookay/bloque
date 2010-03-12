@@ -1,5 +1,5 @@
 //
-//  NSStringEBNF.h
+//  Block.h
 //  Bloque
 //
 //  Created by Woo-Kyoung Noh on 12/03/10.
@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Rule;
 
-@interface NSString (EBNF)
--(Rule*) question_mark ;
--(Rule*) exclamation_mark ;
--(Rule*) pipe:(NSString*)instance ;
+@interface PLBlock : NSObject
 @end
+

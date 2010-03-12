@@ -9,16 +9,28 @@
 #import <Foundation/Foundation.h>
 
 id (^ full_stop )();
-
+id (^ ampersand )(NSString* instance);
+id (^ exclamation_mark )(NSString* instance);
+id (^ square_bracket )(NSString* instance);
 
 @interface Rule : NSObject {
 	NSString* symbol;
-	NSString* instance;
+	id instance;
 }
 @property (retain, nonatomic) NSString* symbol;
-@property (retain, nonatomic) NSString* instance;
+@property (retain, nonatomic) id instance;
 
 + (id) ruleWithSymbol:(NSString*)symbol_ ;
-+ (id) ruleWithSymbol:(NSString*)symbol_ instance:(NSString*)instance_ ;
++ (id) ruleWithSymbol:(NSString*)symbol_ instance:(id)instance_ ;
+-(NSCharacterSet*) to_charset ;
+-(NSString*) sub_symbol ;
++(Rule*) fromElement:(id)element ;
+-(NSCharacterSet*) range_of_chars_to_charset:(NSString*)str ;
 
+@end
+
+
+
+@interface Rule (EBNF)
+-(Rule*) pipe:(NSString*)instance_ ;
 @end

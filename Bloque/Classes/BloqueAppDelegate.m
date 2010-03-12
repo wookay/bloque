@@ -28,6 +28,7 @@
 	[[UnitTest run:@"TestKernel"] all_tests];	
 	[[UnitTest run:@"TestEBNF"] all_tests];	
 	[UnitTest report];
+	
 	//	[[UnitTest run:@"TestKernel"] performSelector:@selector(test_ordinary_words)];
 	
 	[window addSubview:[navigationController view]];

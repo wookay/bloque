@@ -17,7 +17,9 @@
 }
 @property (retain, nonatomic) Quotation* tokenizer;
 
--(NSArray*) parse_multiline_string:(NSString*)string ;
-+ (id) ruleWithObjects:(id)first, ... NS_REQUIRES_NIL_TERMINATION ;
+-(id) parse_multiline_string:(NSString*)string ;
+-(id) parse_rule_base:(int)tokenIndex scanner:(NSScanner*)scanner ;
++(id) ruleWithObject:(id)obj ;
++(id) ruleWithObjects:(id)first, ... NS_REQUIRES_NIL_TERMINATION ;
 
 @end

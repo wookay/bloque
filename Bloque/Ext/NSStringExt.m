@@ -22,6 +22,14 @@ NSString* SWF(NSString* format, ...) {
 
 @implementation NSString (Ext)
 
+-(unichar) to_unichar {
+	return [self characterAtIndex:0];
+}
+
++(NSString*) stringWithCharacter:(unichar) ch {
+	return [NSString stringWithFormat:@"%C", ch];
+}
+
 -(NSString*) stringAtIndex:(int)idx {
 	return [self substringWithRange:NSMakeRange(idx, 1)];
 }
