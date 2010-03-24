@@ -9,9 +9,11 @@
 #import "Listener.h"
 #import "Word.h"
 #import "Quotation.h"
+#import "ExtHeaders.h"
 
 @implementation Listener
 @synthesize datastack;
+@synthesize history;
 
 +(id) listener {
 	return [[[Listener alloc] init] autorelease];
@@ -20,11 +22,16 @@
 -(void) inputsWithArray:(NSArray*)inputs {
 	[self.datastack addObjectsFromArray:inputs];
 	[self call_effect];
+	
+	[self.history addObject:[NSDictionary dictionaryWithKeysAndObjects:
+								 LISTENER_INPUT, inputs,
+								 LISTENER_DATASTACK, [NSArray arrayWithArray:self.datastack],
+								 nil]];
+
 }
 
 -(void) input:(id)obj {
-	[self.datastack addObject:obj];
-	[self call_effect];
+	[self inputsWithArray:[NSArray arrayWithObject:obj]];
 }
 
 -(void) call_effect {
@@ -36,12 +43,14 @@
 	self = [super init];
 	if (self) {
 		self.datastack = [NSMutableArray array];
+		self.history = [NSMutableArray array];
 	}
 	return self;
 }
 
 - (void)dealloc {
-	[self.datastack release];
+	[datastack release];
+	[history release];
 	[super dealloc];
 }
 

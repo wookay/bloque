@@ -7,6 +7,7 @@
 //
 
 #import "Logger.h"
+#import "UserConstants.h"
 
 void print_log_info(const char* filename, int lineno, id format, ...) {
 	NSString *str;
@@ -18,8 +19,19 @@ void print_log_info(const char* filename, int lineno, id format, ...) {
 	} else {
 		str = [NSString stringWithFormat:@"%@", format];
 	}
-	const char* output = [str cStringUsingEncoding:NSUTF8StringEncoding];	
-	NSString* printFormat = [NSString stringWithFormat:@"%%%ds #%%03d   %%s\n", FILENAME_PADDING];
-	printf([printFormat UTF8String], filename, lineno, output);
-    [str release];
+	
+	BOOL log_print = true;	
+	
+#ifdef LOG_FILTER_HASPREFIX
+	if (nil != LOG_FILTER_HASPREFIX) {
+		log_print = [str hasPrefix:LOG_FILTER_HASPREFIX];
+	}
+#endif
+	
+	if (log_print) {		
+		const char* output = [str cStringUsingEncoding:NSUTF8StringEncoding];	
+		NSString* printFormat = [NSString stringWithFormat:@"%%%ds #%%03d   %%s\n", FILENAME_PADDING];
+		printf([printFormat UTF8String], filename, lineno, output);
+		[str release];
+	}
 }

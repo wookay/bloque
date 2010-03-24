@@ -12,9 +12,12 @@
 #import "Inspect.h"
 #import "Logger.h"
 
-static int passed = 0;
-static int failed = 0;
-
+static BOOL dot_if_passed = true;
+static NSDate* test_started_at;
+static int tests = 0;
+static int assertions = 0;
+static int failures = 0;
+static int errors = 0;
 
 @implementation NSObject (UnitTest)
 
@@ -22,8 +25,13 @@ static int failed = 0;
 	NSArray* methods = [self methods];
 	for (NSString* methodStr in methods) {
 		if ([methodStr hasPrefix:@"test"]) {
+			tests += 1;
 			NSString* format = SWF(@"%%%ds        - %%s\n", FILENAME_PADDING-2);
-			printf ([format UTF8String], [SWF(@"%@", [self class]) UTF8String], [methodStr UTF8String]);
+			if (dot_if_passed) {
+				
+			} else {
+				printf ([format UTF8String], [SWF(@"%@", [self class]) UTF8String], [methodStr UTF8String]);				
+			}
 			SEL method = NSSelectorFromString(methodStr);
 			[self performSelector:method];
 		}
@@ -36,27 +44,28 @@ static int failed = 0;
 
 @implementation UnitTest
 
++(void) setup {
+	test_started_at = [NSDate date];
+	printf("Started\n");
+}
+
 +(void) report {
-	if (passed > 1) {
-		printf("OK, passed %d tests.\n", passed);
-	} else {
-		printf("OK, passed %d test.\n", passed);			
-	}	
-	if (failed > 0) {
-		if (failed == 1) {
-			printf("Oops, failed %d test.\n", failed);			
-		} else {
-			printf("Oops, failed %d tests.\n", failed);
-		}
-	}
+	NSTimeInterval elapsed = [test_started_at timeIntervalSinceNow];
+	printf("\nFinished in %.3g seconds.\n", ABS(elapsed));
+	printf("\n%d tests, %d assertions, %d failures, %d errors", tests, assertions, failures, errors);
 }
 
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line {	
+	assertions += 1;
 	if ([expected isEqual:got]) {
-		passed += 1;
-		print_log_info([file UTF8String], line, @"passed: %@", [expected inspect]);
+		if (dot_if_passed) {
+			printf(".");
+		} else {
+			print_log_info([file UTF8String], line, @"passed: %@", [got inspect]);			
+		}
 	} else {
-		failed += 1;
+		failures += 1;
+		printf("\n");
 		print_log_info([file UTF8String], line, @"Assertion failed\nExpected: %@\nGot: %@", [expected inspect], [got inspect]);
 	}
 }

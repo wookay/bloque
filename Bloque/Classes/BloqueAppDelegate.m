@@ -7,13 +7,15 @@
 //
 
 #import "BloqueAppDelegate.h"
-#import "RootViewController.h"
 #import "UnitTest.h"
+#import "NSStringExt.h"
+
+
 
 @implementation BloqueAppDelegate
 
 @synthesize window;
-@synthesize navigationController;
+@synthesize tabBarController;
 
 
 #pragma mark -
@@ -22,16 +24,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     // Override point for customization after app launch    
 
-//	[[UnitTest run:@"TestNSArrayBlock"] all_tests];
-//	[[UnitTest run:@"TestNSDictionaryBlock"] all_tests];
-//	[[UnitTest run:@"TestBasis"] all_tests];	
-//	[[UnitTest run:@"TestKernel"] all_tests];	
-	[[UnitTest run:@"TestEBNF"] all_tests];	
+	[UnitTest setup];
+	[[UnitTest run:@"TestNSArrayBlock"] all_tests];
+	[[UnitTest run:@"TestNSDictionaryBlock"] all_tests];
+	[[UnitTest run:@"TestBasis"] all_tests];	
+	[[UnitTest run:@"TestKernel"] all_tests];	
+	[[UnitTest run:@"TestMath"] all_tests];	
+	[[UnitTest run:@"TestEBNF"] all_tests];		
 	[UnitTest report];
 	
 	//	[[UnitTest run:@"TestKernel"] performSelector:@selector(test_ordinary_words)];
 	
-	[window addSubview:[navigationController view]];
+	[window addSubview:[tabBarController view]];
     [window makeKeyAndVisible];
 	return YES;
 }
@@ -46,7 +50,7 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	[navigationController release];
+	[tabBarController release];
 	[window release];
 	[super dealloc];
 }

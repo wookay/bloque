@@ -12,11 +12,10 @@
 #import "Rule.h"
 #import "Syntax.h"
 #import "Block.h"
+#import "Logger.h"
 
 @implementation EBNF
 @synthesize tokenizer;
-
-
 	
 -(id) parse_multiline_string:(NSString*)string {
 	NSMutableArray* tokens = [NSMutableArray array];

@@ -8,18 +8,46 @@
 
 #import "Inspect.h"
 #import "NSStringExt.h"
+#import "Logger.h"
+#import "objc/runtime.h"
+#import "NSNumberExt.h"
+
 
 @implementation NSObject (Inspect)
 -(id) inspect {
-	if ([self isKindOfClass:[NSArray class]]) {
+	NSFormatterToInspect* formatter = [[NSFormatterToInspect alloc] init];
+	NSString* str = [formatter stringForObjectValue:self];
+	[formatter release];
+	return str;
+}
+@end
+
+@implementation NSFormatterToInspect
+- (NSString *)stringForObjectValue:(id)anObject {
+	if ([anObject isKindOfClass:[NSArray class]]) {
 		NSMutableArray* ary = [NSMutableArray array];
-		for (id obj in (NSArray*)self) {
+		for (id obj in (NSArray*)anObject) {
 			[ary addObject:SWF(@"%@", [obj inspect])];
 		}
 		return SWF(@"[%@]", [ary componentsJoinedByString:@", "]);
-	} else if ([self isKindOfClass:[NSString class]]) {
-		return SWF(@"%@", self);
+	} else if ([anObject isKindOfClass:[NSString class]]) {
+		return SWF(@"%@", anObject);
+	} else if ([anObject isKindOfClass:[NSValue class]]) {
+		const char* aTypeDescription = [(NSValue*)anObject objCType];
+		switch (*aTypeDescription) {
+			case _C_FLT: {
+					float value = [anObject doubleValue];
+					if ([[anObject floor_down] doubleValue] == value) {
+						return SWF(@"%.1f", value);						
+					} else {
+						return SWF(@"%f", value);												
+					}
+				}
+				break;
+			default:
+				break;
+		}
 	}
-	return SWF(@"%@", self);
+	return SWF(@"%@", anObject);
 }
 @end

@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (Inspect)
--(NSString*) inspect ;
+-(id) inspect ;
+@end
+
+
+@interface NSFormatterToInspect : NSFormatter
 @end

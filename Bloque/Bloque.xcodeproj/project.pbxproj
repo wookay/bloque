@@ -13,10 +13,11 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		DA1D0CE11149D95F0040AFC3 /* NSObjectEBNF.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0CE01149D95F0040AFC3 /* NSObjectEBNF.m */; };
 		DA1D11AD114A58AE0040AFC3 /* NSArrayExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D11AC114A58AE0040AFC3 /* NSArrayExt.m */; };
+		DA1D1342114A8DD20040AFC3 /* ListenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D1340114A8DD20040AFC3 /* ListenerViewController.m */; };
+		DA1D1343114A8DD20040AFC3 /* ListenerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1D1341114A8DD20040AFC3 /* ListenerViewController.xib */; };
+		DA1F9E39115510ED000AD0B6 /* Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F9E38115510ED000AD0B6 /* Symbol.m */; };
 		DA21AA261144EF380081BD54 /* NSNumberExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AA251144EF380081BD54 /* NSNumberExt.m */; };
 		DA21AD441145D62C0081BD54 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AD431145D62C0081BD54 /* Logger.m */; };
 		DA21AEC61145EA910081BD54 /* PrettyPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21AEC51145EA910081BD54 /* PrettyPrint.m */; };
@@ -25,6 +26,8 @@
 		DA21B71111468BC10081BD54 /* Syntax.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21B71011468BC10081BD54 /* Syntax.m */; };
 		DA21B74611468CCF0081BD54 /* TestKernel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21B74511468CCF0081BD54 /* TestKernel.m */; };
 		DA2F5613114355160032FBC3 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2F5612114355160032FBC3 /* Math.m */; };
+		DA368ABD1158794C00FF634F /* Combinators.m in Sources */ = {isa = PBXBuildFile; fileRef = DA368ABC1158794C00FF634F /* Combinators.m */; };
+		DA3690991159FEB500FF634F /* TestMath.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3690981159FEB500FF634F /* TestMath.m */; };
 		DA4D1B641140D8D400CE3C8D /* NSObjectExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1B631140D8D400CE3C8D /* NSObjectExt.m */; };
 		DA4D1B691140D97300CE3C8D /* NSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1B681140D97300CE3C8D /* NSStringExt.m */; };
 		DA4D1C3A1140E08400CE3C8D /* TestNSDictionaryBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D1C391140E08400CE3C8D /* TestNSDictionaryBlock.m */; };
@@ -58,10 +61,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* Bloque_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bloque_Prefix.pch; sourceTree = "<group>"; };
-		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Bloque-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Bloque-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		DA1D0CDF1149D95F0040AFC3 /* NSObjectEBNF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectEBNF.h; sourceTree = "<group>"; };
@@ -69,6 +69,11 @@
 		DA1D0DE01149EFB60040AFC3 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		DA1D11AB114A58AE0040AFC3 /* NSArrayExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExt.h; sourceTree = "<group>"; };
 		DA1D11AC114A58AE0040AFC3 /* NSArrayExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExt.m; sourceTree = "<group>"; };
+		DA1D133F114A8DD20040AFC3 /* ListenerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenerViewController.h; sourceTree = "<group>"; };
+		DA1D1340114A8DD20040AFC3 /* ListenerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenerViewController.m; sourceTree = "<group>"; };
+		DA1D1341114A8DD20040AFC3 /* ListenerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListenerViewController.xib; sourceTree = "<group>"; };
+		DA1F9E37115510ED000AD0B6 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		DA1F9E38115510ED000AD0B6 /* Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Symbol.m; sourceTree = "<group>"; };
 		DA21AA241144EF380081BD54 /* NSNumberExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExt.h; sourceTree = "<group>"; };
 		DA21AA251144EF380081BD54 /* NSNumberExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberExt.m; sourceTree = "<group>"; };
 		DA21AD421145D62C0081BD54 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -87,6 +92,10 @@
 		DA2F55D9114353A30032FBC3 /* ExtHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtHeaders.h; sourceTree = "<group>"; };
 		DA2F5611114355160032FBC3 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		DA2F5612114355160032FBC3 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
+		DA368ABB1158794C00FF634F /* Combinators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Combinators.h; sourceTree = "<group>"; };
+		DA368ABC1158794C00FF634F /* Combinators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Combinators.m; sourceTree = "<group>"; };
+		DA3690971159FEB500FF634F /* TestMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMath.h; sourceTree = "<group>"; };
+		DA3690981159FEB500FF634F /* TestMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMath.m; sourceTree = "<group>"; };
 		DA4D1B621140D8D400CE3C8D /* NSObjectExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExt.h; sourceTree = "<group>"; };
 		DA4D1B631140D8D400CE3C8D /* NSObjectExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectExt.m; sourceTree = "<group>"; };
 		DA4D1B671140D97300CE3C8D /* NSStringExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExt.h; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 		DAEB1C721140A27B00BFC513 /* NSNumberBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberBlock.m; sourceTree = "<group>"; };
 		DAEB1C731140A27B00BFC513 /* NSStringBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringBlock.h; sourceTree = "<group>"; };
 		DAEB1C741140A27B00BFC513 /* NSStringBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringBlock.m; sourceTree = "<group>"; };
+		DAEC9A8E115A295E0068F3DE /* UserConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserConstants.h; sourceTree = "<group>"; };
 		DAF056F7114476450072A999 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		DAF056F8114476450072A999 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		DAF0578A11448A8C0072A999 /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listener.h; sourceTree = "<group>"; };
@@ -149,14 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		080E96DDFE201D6D7F000001 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				DA1D1256114A870F0040AFC3 /* Listener */,
 				1D3623240D0F684500981E51 /* BloqueAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BloqueAppDelegate.m */,
 			);
+			name = Controllers;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -172,11 +182,12 @@
 			isa = PBXGroup;
 			children = (
 				DA21B01A114605C30081BD54 /* README */,
+				080E96DDFE201D6D7F000001 /* Controllers */,
 				DA8EFC281140B7F90013E218 /* Test Cases */,
 				DAEB1C6C1140A27B00BFC513 /* Block */,
 				DA4D1D121141338C00CE3C8D /* Concatenative */,
+				DA21AD611145D6D50081BD54 /* UnitTest */,
 				DA8EFC2D1140B8590013E218 /* Ext */,
-				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -197,8 +208,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				28F335F01007B36200424DE2 /* RootViewController.xib */,
-				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Bloque-Info.plist */,
 			);
 			name = Resources;
@@ -215,6 +224,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA1D1256114A870F0040AFC3 /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				DA1D133F114A8DD20040AFC3 /* ListenerViewController.h */,
+				DA1D1340114A8DD20040AFC3 /* ListenerViewController.m */,
+				DA1D1341114A8DD20040AFC3 /* ListenerViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+			);
+			name = Listener;
+			path = ../Play;
+			sourceTree = "<group>";
+		};
 		DA21ACA61145D22A0081BD54 /* Basis */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +247,8 @@
 				DA8014FD1141F80A00F57015 /* Sequences.m */,
 				DA2F5611114355160032FBC3 /* Math.h */,
 				DA2F5612114355160032FBC3 /* Math.m */,
+				DA1F9E37115510ED000AD0B6 /* Symbol.h */,
+				DA1F9E38115510ED000AD0B6 /* Symbol.m */,
 			);
 			name = Basis;
 			sourceTree = "<group>";
@@ -241,6 +264,8 @@
 				DAF057AC11448C7D0072A999 /* Callable.m */,
 				DA4D1D241141362C00CE3C8D /* Quotation.h */,
 				DA4D1D251141362C00CE3C8D /* Quotation.m */,
+				DA368ABB1158794C00FF634F /* Combinators.h */,
+				DA368ABC1158794C00FF634F /* Combinators.m */,
 				DA21AEC41145EA910081BD54 /* PrettyPrint.h */,
 				DA21AEC51145EA910081BD54 /* PrettyPrint.m */,
 			);
@@ -250,6 +275,7 @@
 		DA21AD611145D6D50081BD54 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				DAEC9A8E115A295E0068F3DE /* UserConstants.h */,
 				DA21AF581146027F0081BD54 /* Inspect.h */,
 				DA21AF591146027F0081BD54 /* Inspect.m */,
 				DA21AD421145D62C0081BD54 /* Logger.h */,
@@ -258,6 +284,7 @@
 				DA8EFC311140B8590013E218 /* UnitTest.m */,
 			);
 			name = UnitTest;
+			path = Ext;
 			sourceTree = "<group>";
 		};
 		DA21AD771145D7390081BD54 /* Block */ = {
@@ -278,6 +305,8 @@
 				DA4D1D201141343A00CE3C8D /* TestBasis.m */,
 				DA21B74411468CCF0081BD54 /* TestKernel.h */,
 				DA21B74511468CCF0081BD54 /* TestKernel.m */,
+				DA3690971159FEB500FF634F /* TestMath.h */,
+				DA3690981159FEB500FF634F /* TestMath.m */,
 				DA57282211492BFA00870503 /* TestEBNF.h */,
 				DA57282311492BFA00870503 /* TestEBNF.m */,
 			);
@@ -336,7 +365,6 @@
 				DA4D1C481140E49C00CE3C8D /* NSDictionaryExt.m */,
 				DA21B3DF1146360C0081BD54 /* NSMutableArrayExt.h */,
 				DA21B3E01146360C0081BD54 /* NSMutableArrayExt.m */,
-				DA21AD611145D6D50081BD54 /* UnitTest */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -407,7 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+				DA1D1343114A8DD20040AFC3 /* ListenerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +448,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BloqueAppDelegate.m in Sources */,
-				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				DAEB1C751140A27B00BFC513 /* NSArrayBlock.m in Sources */,
 				DAEB1C761140A27B00BFC513 /* NSDictionaryBlock.m in Sources */,
 				DAEB1C771140A27B00BFC513 /* NSNumberBlock.m in Sources */,
@@ -453,6 +480,10 @@
 				DA57292011493F7800870503 /* NSStringEBNF.m in Sources */,
 				DA1D0CE11149D95F0040AFC3 /* NSObjectEBNF.m in Sources */,
 				DA1D11AD114A58AE0040AFC3 /* NSArrayExt.m in Sources */,
+				DA1D1342114A8DD20040AFC3 /* ListenerViewController.m in Sources */,
+				DA1F9E39115510ED000AD0B6 /* Symbol.m in Sources */,
+				DA368ABD1158794C00FF634F /* Combinators.m in Sources */,
+				DA3690991159FEB500FF634F /* TestMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

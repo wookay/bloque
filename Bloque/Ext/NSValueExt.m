@@ -8,7 +8,7 @@
 
 #import "NSValueExt.h"
 #import "objc/runtime.h"
-
+#import "Logger.h"
 
 @implementation NSValue (Ext)
 
@@ -16,7 +16,8 @@
 	if (_C_PTR == *aTypeDescription && nil == *(id *)aValue) {
 		return nil; // nil should stay nil, even if it's technically a (void *)
 	}
-	switch (*aTypeDescription) {
+
+	switch (*aTypeDescription) {			
 		case _C_CHR: // BOOL, char
 			return [NSNumber numberWithChar:*(char *)aValue];
 		case _C_UCHR: return [NSNumber numberWithUnsignedChar:*(unsigned char *)aValue];

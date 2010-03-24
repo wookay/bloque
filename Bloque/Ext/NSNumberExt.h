@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NUM(num) [NSNumber numberWithInt:num]
+#define NUM(num) [NSNumber numberWithDouble:num]
 
 
 @interface NSNumber (Ext)
@@ -16,4 +16,13 @@
 -(NSNumber*) plus:(NSNumber*) num ;
 -(NSNumber*) divide:(NSNumber*) num ;
 
+@end
+
+
+
+
+@interface NSNumber (MathFunctions)
+-(id) round_up ;
+-(id) ceiling ;
+-(id) floor_down ;
 @end

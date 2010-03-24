@@ -25,6 +25,7 @@
 
 @interface UnitTest : NSObject
 
++(void) setup ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
 +(id) run:(NSString*)targetClassString ;
 +(void) report ;
