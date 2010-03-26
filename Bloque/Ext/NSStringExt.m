@@ -19,6 +19,9 @@ NSString* SWF(NSString* format, ...) {
 	return ret;
 }
 
+NSArray* _w(NSString* str) {
+	return [str componentsSeparatedByString:SPACE];
+}
 
 @implementation NSString (Ext)
 

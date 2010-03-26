@@ -8,7 +8,6 @@
 
 #import "BloqueAppDelegate.h"
 #import "UnitTest.h"
-#import "NSStringExt.h"
 
 
 
@@ -24,16 +23,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     // Override point for customization after app launch    
 
-	[UnitTest setup];
-	[[UnitTest run:@"TestNSArrayBlock"] all_tests];
-	[[UnitTest run:@"TestNSDictionaryBlock"] all_tests];
-	[[UnitTest run:@"TestBasis"] all_tests];	
-	[[UnitTest run:@"TestKernel"] all_tests];	
-	[[UnitTest run:@"TestMath"] all_tests];	
-	[[UnitTest run:@"TestEBNF"] all_tests];		
-	[UnitTest report];
-	
-	//	[[UnitTest run:@"TestKernel"] performSelector:@selector(test_ordinary_words)];
+	[UnitTest run_all_tests];
+
+//	[UnitTest setup];
+//	[[UnitTest target:@"TestKernel"] run_tests];	
+//	[[UnitTest target:@"TestKernel"] run_test:@selector(test_ordinary_words)];
+//	[UnitTest report];
 	
 	[window addSubview:[tabBarController view]];
     [window makeKeyAndVisible];
@@ -57,4 +52,3 @@
 
 
 @end
-

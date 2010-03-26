@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSValueExt.h"
 
 #define __FILENAME__ (strrchr(__FILE__,'/')+1)
 #define assert_equal(expected, got) \
@@ -19,15 +18,24 @@
 	[UnitTest assert:got_encoded equals:expected_encoded inFile:[NSString stringWithUTF8String:__FILENAME__] atLine:__LINE__]; \
 } while(0)
 
-@interface NSObject (UnitTest)
--(void) all_tests ;
-@end
 
 @interface UnitTest : NSObject
 
 +(void) setup ;
-+(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
-+(id) run:(NSString*)targetClassString ;
 +(void) report ;
++(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
++(id) target:(NSString*)targetClassString ;
++(void) run_all_tests ;
 
+@end
+
+
+@interface NSObject (UnitTest)
+-(void) run_test:(SEL)sel ;
+-(void) run_tests ;
+-(NSArray*) methods ;
+@end
+
+@interface NSValue (Ext)
++ valueWithValue:(const void *)aValue withObjCType:(const char *)aTypeDescription ;
 @end

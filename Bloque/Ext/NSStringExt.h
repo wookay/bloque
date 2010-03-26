@@ -30,7 +30,7 @@
 #define CHAR_MINUS       '-'
 
 NSString* SWF(NSString* format, ...) ;
-
+NSArray* _w(NSString* str) ;
 
 @interface NSString (Ext)
 

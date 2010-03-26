@@ -30,6 +30,12 @@
 			[ary addObject:SWF(@"%@", [obj inspect])];
 		}
 		return SWF(@"[%@]", [ary componentsJoinedByString:@", "]);
+	} else if ([anObject isKindOfClass:[NSDictionary class]]) {
+		NSMutableArray* ary = [NSMutableArray array];
+		for (id key in anObject) {
+			[ary addObject:[NSString stringWithFormat:@"%@ = %@", key, [anObject objectForKey:key]]];
+		}
+		return SWF(@"{%@}", [ary componentsJoinedByString:@", "]);
 	} else if ([anObject isKindOfClass:[NSString class]]) {
 		return SWF(@"%@", anObject);
 	} else if ([anObject isKindOfClass:[NSValue class]]) {
